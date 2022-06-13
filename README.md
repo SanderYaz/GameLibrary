@@ -6,6 +6,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-![GameLibrary](https://github.com/SanderYaz/GameLibrary/assets/img/ss1.png?raw=true)
+![GameLibrary](https://github.com/SanderYaz/GameLibrary/blob/master/src/assets/img/ss1.png?raw=true)
 
-![GameLibrary2](https://github.com/SanderYaz/GameLibrary/assets/img/ss2.png?raw=true)
+![GameLibrary2](https://github.com/SanderYaz/GameLibrary/blob/master/src/assets/img/ss2.png?raw=true)
