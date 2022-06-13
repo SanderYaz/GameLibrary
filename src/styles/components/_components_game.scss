@@ -1,0 +1,71 @@
+.game-layout {
+  overflow: auto;
+  overflow-y: hidden;
+  height: 80vh;
+  border-radius: 30px;
+  a:hover {
+    color: white;
+    box-shadow: -1px 2px 6px 3px rgba(192, 202, 218, 0.9);
+  }
+}
+
+.game-card {
+  width: 250px;
+  border-radius: 40px;
+  border-style: hidden;
+  box-shadow: -1px 2px 6px 3px rgba(192, 202, 218, 0.3);
+  margin: 20px;
+  float: left;
+  img {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 40px;
+  }
+  a:hover {
+    box-shadow: -1px 2px 6px 3px rgba(192, 202, 218, 0.9);
+    color: white;
+  }
+}
+.button-create {
+  color: white;
+  background-color: green;
+  border-radius: 30px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: revert;
+  font-size: 20px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+.button-delete {
+  float: right;
+  color: white;
+  background-color: red;
+  border-radius: 30px;
+  padding: 5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: revert;
+  font-size: 15px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.button-back {
+  color: white;
+  background-color: black;
+  border-radius: 30px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: revert;
+  font-size: 20px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.title-card {
+  font-size: 25px;
+  text-shadow: #0f0f0f;
+}

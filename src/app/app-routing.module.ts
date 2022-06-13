@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {CustomPreloadingService} from "./core/services/custom-preloading.service";
-import {GameListComponent} from "./routes/game/game-list/game-list.component";
+import {LayoutDefaultComponent} from "./layout/layout-default/layout-default.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: GameListComponent,
+    component: LayoutDefaultComponent,
     children: [
       { path: '', redirectTo: 'game', pathMatch: 'full' },
       {

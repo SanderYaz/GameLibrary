@@ -1,0 +1,11 @@
+<nz-card class="game-card" [nzCover]="coverTemplate">
+  <nz-card-meta [nzTitle]="cardName"></nz-card-meta>
+  <div class="mt-10"> Bundle: <span> {{bundleName}} </span></div>
+  <div> Owner: <span> {{ownerName}} </span></div>
+  <span>
+    <a (click)="deleteGame(selectedId)" class="button-delete"  routerLinkActive="ant-menu-item-selected">Delete</a>
+  </span>
+</nz-card>
+<ng-template #coverTemplate>
+  <img alt="example" [src]="image" />
+</ng-template>

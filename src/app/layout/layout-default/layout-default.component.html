@@ -1,0 +1,17 @@
+<nz-layout class="layout-default">
+  <nz-header class="layout-default__header">
+    <div class="layout-default__header-content">
+      <span>
+        <a routerLink="/game/list" class="button"  routerLinkActive="ant-menu-item-selected">Game List</a>
+      </span>
+      <img src="assets/img/logo.png" alt="GameLibrary"/>
+      <span>
+        <a routerLink="/game/create" class="button"  routerLinkActive="ant-menu-item-selected">Game Create</a>
+      </span>
+    </div>
+  </nz-header>
+  <nz-content class="layout-default__content">
+    <router-outlet></router-outlet>
+  </nz-content>
+  <nz-footer class="layout-default__footer">GameLibrary ©2022 Created by <a href="https://www.sanderyaz.com">Sander</a></nz-footer>
+</nz-layout>

@@ -1,1 +1,19 @@
-<p>game-list works!</p>
+<nz-card class="game-layout" [nzTitle]="titleTemplate" [nzExtra]="createTemplate">
+  <span *ngFor="let game of gameList">
+    <app-game-card [cardName]="game?.name" [image]="game?.image" [bundleName]="game?.bundle" [ownerName]="game?.owner" [selectedId]="game?.id" (pageMetadataChanged)="getGameList()" > </app-game-card>
+  </span>
+  <span *ngIf="gameList.length === 0">
+    <h3> No Records Found</h3>
+  </span>
+</nz-card>
+
+<ng-template #createTemplate>
+   <span>
+    <a routerLink="/game/create" class="button-create"  routerLinkActive="ant-menu-item-selected">Create</a>
+  </span>
+</ng-template>
+
+<ng-template #titleTemplate>
+  <span class="title-card"> Game List </span>
+</ng-template>
+

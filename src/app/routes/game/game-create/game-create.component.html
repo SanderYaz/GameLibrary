@@ -1,1 +1,48 @@
-<p>game-create works!</p>
+<nz-card class="game-layout" [nzTitle]="titleTemplate" [nzExtra]="createTemplate">
+  <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <img hidden class="img" id="avatar"/>
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="name" nzRequired>Game Name</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input Game Name">
+        <input nz-input id="name" formControlName="name" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="bundle">Bundle</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid Bundle Name!">
+        <input nz-input formControlName="bundle" id="bundle"/>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="owner">Owner</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+        <input nz-input formControlName="owner" id="owner" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="owner">Image</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The Upload Image">
+        <input nz-input type="file" id="selectAvatar" (change)="uploadFile($event)"/>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item nz-row class="register-area">
+      <nz-form-control [nzSpan]="14" [nzOffset]="6">
+        <button nz-button nzType="primary">Create</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</nz-card>
+
+<ng-template #createTemplate>
+   <span>
+    <a routerLink="/game/list" class="button-back"  routerLinkActive="ant-menu-item-selected">Back</a>
+  </span>
+</ng-template>
+<ng-template #titleTemplate>
+  <span class="title-card"> Game Create </span>
+</ng-template>
+
