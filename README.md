@@ -8,4 +8,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ![GameLibrary](https://github.com/SanderYaz/GameLibrary/blob/master/src/assets/img/ss1.png?raw=true)
 
-![GameLibrary2](https://github.com/SanderYaz/GameLibrary/blob/master/src/assets/img/ss2.png?raw=true)
+![Game Library](https://github.com/SanderYaz/GameLibrary/blob/master/src/assets/img/ss2.png?raw=true)
