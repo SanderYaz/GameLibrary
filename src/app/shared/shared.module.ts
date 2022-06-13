@@ -10,6 +10,12 @@ import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
+import {NzUploadModule} from "ng-zorro-antd/upload";
+import {NzGridModule} from "ng-zorro-antd/grid";
+import {NzFormModule} from "ng-zorro-antd/form";
+import {NzInputModule} from "ng-zorro-antd/input";
+import {NzModalModule} from "ng-zorro-antd/modal";
+import {NzNotificationModule} from "ng-zorro-antd/notification";
 
 const NGZORROMODULS = [
   NzButtonModule,
@@ -18,7 +24,12 @@ const NGZORROMODULS = [
   NzDividerModule,
   NzIconModule,
   NzMenuModule,
-  NzCardModule
+  NzCardModule,
+  NzUploadModule,
+  NzGridModule,
+  NzFormModule,
+  NzInputModule,
+  NzModalModule
 ]
 
 const THIRDMODULES = [
@@ -39,6 +50,7 @@ const THIRDMODULES = [
     CommonModule,
     FormsModule,
     RouterModule,
+    NzNotificationModule,
     ReactiveFormsModule,
     // third libs
     ...THIRDMODULES,

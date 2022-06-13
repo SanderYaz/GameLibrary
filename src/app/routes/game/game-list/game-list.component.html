@@ -1,5 +1,5 @@
 <nz-card class="game-layout" [nzTitle]="titleTemplate" [nzExtra]="createTemplate">
-  <span *ngFor="let game of gameList">
+  <span *ngFor="let game of gameListFiltered">
     <app-game-card [cardName]="game?.name" [image]="game?.image" [bundleName]="game?.bundle" [ownerName]="game?.owner" [selectedId]="game?.id" (pageMetadataChanged)="getGameList()" > </app-game-card>
   </span>
   <span *ngIf="gameList.length === 0">
@@ -15,5 +15,8 @@
 
 <ng-template #titleTemplate>
   <span class="title-card"> Game List </span>
+  <span>
+    <input class="game-layout__search" type="text" nz-input placeholder="Search Game" [(ngModel)]="searchText" (ngModelChange)="onSearch()"/>
+  </span>
 </ng-template>
 

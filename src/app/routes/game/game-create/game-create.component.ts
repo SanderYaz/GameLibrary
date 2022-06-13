@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {GameService} from "../../../core/services/game.service";
 import {Router} from "@angular/router";
+import {NzNotificationService} from "ng-zorro-antd/notification";
 
 @Component({
   selector: 'app-game-create',
@@ -13,6 +14,7 @@ export class GameCreateComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private router: Router,
+              private notificationService: NzNotificationService,
               private gameService : GameService) { }
 
   ngOnInit(): void {
@@ -56,9 +58,11 @@ export class GameCreateComponent implements OnInit {
   submitForm() {
     if (this.validateForm.valid) {
       this.gameService.createGame(this.validateForm)
+      this.notificationService.success('Success!', 'Game Created Successfully!');
       this.validateForm.reset();
       this.router.navigate(['/']);
     } else {
+      this.notificationService.error('Error', 'Please Check Inputs');
       Object.values(this.validateForm.controls).forEach(control => {
         if (control.invalid) {
           control.markAsDirty();

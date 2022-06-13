@@ -1,5 +1,6 @@
 import {Component, Input, Output, OnInit, EventEmitter} from '@angular/core';
 import {GameService} from "../../../core/services/game.service";
+import {NzNotificationService} from "ng-zorro-antd/notification";
 
 @Component({
   selector: 'app-game-card',
@@ -14,13 +15,16 @@ export class GameCardComponent implements OnInit {
   @Input() selectedId: any;
   @Output() pageMetadataChanged = new EventEmitter<any>();
 
-  constructor(private gameService : GameService) { }
+  constructor(
+    private notificationService: NzNotificationService,
+    private gameService : GameService) { }
 
   ngOnInit(): void {
   }
 
   deleteGame(deleteId: number) {
     this.gameService.deleteGame(deleteId);
+    this.notificationService.success('Success!', 'Game Deleted Successfully!');
     this.pageMetadataChanged.emit();
   };
 }

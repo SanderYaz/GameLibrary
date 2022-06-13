@@ -8,6 +8,8 @@ import {GameService} from "../../../core/services/game.service";
 })
 export class GameListComponent implements OnInit {
   gameList!: any;
+  gameListFiltered!: any;
+  searchText: any;
   constructor(private gameService : GameService) { }
 
   ngOnInit(): void {
@@ -18,6 +20,12 @@ export class GameListComponent implements OnInit {
   }
   getGameList() {
     this.gameList = this.gameService.getGameList();
+    this.gameListFiltered = this.gameList;
   }
-
+  onSearch() {
+    const all = this.gameList.filter((obj: any) => {
+      return obj.name.includes(this.searchText);
+    });
+    this.gameListFiltered = all;
+  }
 }
